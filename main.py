@@ -52,23 +52,26 @@ def game_func(action: str) -> bool:
     }
 
     if action not in win_dict:
-        print("You selected an invalid option.")
+        print("You selected an invalid option.\n")
     else:
         computer = random.choice(list(win_dict.keys()))
         print(f"Computer: {computer}")
         print(matchup_dict[tuple(sorted((action, computer)))])
         if computer == action:
-            print("It's a tie!")
+            print("It's a tie!\n")
         elif computer in win_dict[action]:
-            print("You win!")
+            print("You win!\n")
         else:
-            print("You lose!")
+            print("You lose!\n")
 
     return True
 
 
 if __name__ == "__main__":
     while True:
-        action = input()
+        action = input(
+            'Enter "rock", "paper", "scissors", "lizard", or "spock" to play. ' 
+            + 'Enter "exit" to stop playing. \n'
+        )
         if not game_func(action):
             break
