@@ -1,1 +1,1 @@
-This is a temporary README file for this project. Will update this later.
+A basic rock-paper-scissors-lizard-Spock player. Run main.py to play!
